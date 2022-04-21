@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Breaking Bad API exercise
+
+1. Use the breaking bad API: https://breakingbadapi.com/documentation to store in your state all characters. You'll use this endpoint: https://www.breakingbadapi.com/api/characters You need to do the API call when the user loads the page for the first time. Do the API call, store it in your state and check that works with React Dev Tools.
+
+2. Create a logic on your html that will show some loading text if the API is not ready and some text saying "API ready" if it's loaded.
+
+3. Instead of showing a text saying "API is loaded" change it to display all characters. You could display the character name, the nickname, the picture and the status.
+
+4. At this point, if somebody in the groups feels like, push the current code to github and clone it so they can work on the styles. If not feel free to use something like:
+
+```css
+/* main container of all elements */
+.list-of-characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* each character card */
+.char-wrapper {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+}
+/* image inside of the character card */
+.char-wrapper img {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+}
+```
+
+5. Create a logic that will check if a character is alive. If he/she is alive, you will show a button to kill him/her on the character card.
+
+6. If the user clicks that button, you will change that character status from 'Alive' to 'Deceased'. Spoiler: You will need to know on which character you are clicking, find that character on your array of characters, get inside that characters properties and then change the value to be 'Deceased'
+
+7. Enjoy yourself killing some characters you hate.
+
+8. Add a button on the application that will be in charge of showing only people alive. If clicked, you will only render people that their status is 'Alive'.
+
+9. Add an extra logic on that button. If you click it again, it will show again everybody in the list
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
